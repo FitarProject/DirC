@@ -1,3 +1,3 @@
-DirCollect
+DirCollector
 
 读取本地指定目录生成相应字典，并对其调整修改
