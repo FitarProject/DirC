@@ -47,4 +47,4 @@ if __name__ == '__main__':
         print('output: ./dict_file.txt')
         with open('dict_file.txt', 'w', encoding='utf-8') as f:
             for file_path in all_file:
-                f.write(file_path + '\n')   
+                f.write(file_path + '\n')
