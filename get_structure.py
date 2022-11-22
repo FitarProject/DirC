@@ -28,6 +28,7 @@ def output(out_list):
     for i in out_list:
         print(i)
 
+
 if __name__ == '__main__':
     #输入要提取的根目录
     try:

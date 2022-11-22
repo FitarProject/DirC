@@ -3,7 +3,6 @@ DirCollector
 读取本地指定目录结构
 
 
-
 example:
 
 ```
