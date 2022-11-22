@@ -1,3 +1,12 @@
-DirCollect
+DirCollector
 
-读取本地指定目录生成相应字典，并对其调整修改
+读取本地指定目录结构
+
+
+
+example:
+
+```
+python3 get_structure.py target_dir output_dir
+```
+

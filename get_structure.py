@@ -3,7 +3,7 @@
 # author: Fitar
 # 文件结构提取
 
-import os
+import os, sys
 
 
 def get_structure(mypath):
@@ -31,16 +31,19 @@ def output(out_list):
 if __name__ == '__main__':
     #输入要提取的根目录
     try:
-        mypath = input('请输入要提取的文件目录：')
+        mypath = sys.argv[1]
         all_path, all_file = get_structure(mypath)
     except KeyboardInterrupt:
         print("\nCanceled by the user")
         exit(0)
-    #打印相对目录结构
-    output(all_path)
-    #打印所有非目录文件
-    output(all_file)
     #将字典写入文件
-    with open('dict_file.txt', 'w', encoding='utf-8') as f:
-        for file_path in all_file:
-            f.write(file_path + '\n')
+    if len(sys.argv) > 2:
+        print('output:' + sys.argv[2] + '/dict_file.txt')
+        with open(sys.argv[2] + '/dict_file.txt', 'w', encoding='utf-8') as f:
+            for file_path in all_file:
+                f.write(file_path + '\n')
+    else:
+        print('output: ./dict_file.txt')
+        with open('dict_file.txt', 'w', encoding='utf-8') as f:
+            for file_path in all_file:
+                f.write(file_path + '\n')   
